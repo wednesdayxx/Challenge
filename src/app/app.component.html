@@ -9,6 +9,7 @@
 
   <div>
   <input type="text" placeholder="Add Venue" [(ngModel)]="venue">
+  <input type="text" placeholder="Add Court Number" [(ngModel)]="court">
   <input type="date" [(ngModel)]="date">
   <input type="time" [(ngModel)]="time">
   <input type="button" value="Add Game" (click)="createGame()">
@@ -19,7 +20,8 @@
     <input type="text" placeholder="Enter Name" [(ngModel)]="payer">
     <div *ngFor="let game of games | async">
       <span>
-        {{ game.data.venue }}
+        {{ game.data.venue }}, Court {{ game.data.court }}, {{ game.data.time }},
+        {{ game.data.date }}
       </span>
       <input type="button" value="Confirm Payment" (click)="payForGame(game.id)">
       <input type="button" value="X" (click)="deleteGame(game.id)">

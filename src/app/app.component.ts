@@ -26,6 +26,7 @@ export class AppComponent {
   venue: string = "";
   date: string;
   time: string;
+  court: string = "";
   
   payment: number;
   payer: string = "";
@@ -67,6 +68,7 @@ export class AppComponent {
   createGame() {
     this.firestore.collection("games").add({
       venue: this.venue,
+      court: this.court,
       payment: 0,
       date: this.date,
       time: this.time,
