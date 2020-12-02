@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "challengeapp-e0eeb": {
+      "hosting": {
+        "challengeApp": [
+          "challengeapp-e0eeb"
+        ]
+      }
+    }
+  }
+}
